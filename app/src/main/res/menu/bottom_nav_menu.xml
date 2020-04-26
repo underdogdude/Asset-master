@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/table_search"
+        android:iconTint="@color/colorAccent"
+        android:title="ตรวจสอบครุภัณฑ์" />
+
+    <item
+        android:id="@+id/navigation_asset"
+        android:icon="@drawable/format_list_bulleted"
+        android:iconTint="@color/colorAccent"
+        android:title="รายการครุภัณฑ์" />
+
+</menu>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3F3F3"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_cube_outline_grey600_36dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="รหัสครุภัณฑ์"
+                            android:textColor="@color/amber" />
+
+                        <TextView
+                            android:id="@+id/txtInvNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="รหัสครุภัณฑ์ในระบบ"
+                        android:textColor="@color/amber" />
+
+                    <TextView
+                        android:id="@+id/txtErpNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="รายการ"
+                        android:textColor="@color/amber" />
+
+                    <TextView
+                        android:id="@+id/txtDescription1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="เพิ่มเติม"
+                    android:textColor="@color/title_text_color"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="1dp"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/viewInputProductNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="@dimen/cardview_default_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="รหัสครุภัณฑ์"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/inputProductNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@android:color/transparent"
+                        android:hint="กรอกรหัสครุภัณฑ์"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/btnCancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start|center"
+                            android:text="ยกเลิก"
+                            android:textSize="16sp" />
+
+                        <com.ornach.nobobutton.NoboButton
+                            android:id="@+id/btnSearchProductID"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_weight="1"
+                            android:visibility="visible"
+                            app:nb_backgroundColor="@color/colorAccent"
+                            app:nb_borderColor="@color/colorAccent"
+                            app:nb_borderWidth="2dp"
+                            app:nb_focusColor="#66ACEB"
+                            app:nb_radius="5dp"
+                            app:nb_text="ค้นหา"
+                            app:nb_textColor="@color/white"
+                            app:nb_textStyle="bold" />
+                    </FrameLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/viewInputStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/cardview_default_radius"
+                app:cardElevation="@dimen/cardview_default_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="เลือกสถานะครุภัณฑ์"
+                        android:textSize="16sp" />
+
+                    <FrameLayout
+                        android:id="@+id/viewStatus"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/chevronTagStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_chevron_down_grey600_24dp" />
+
+                        <com.ornach.nobobutton.NoboButton
+                            android:id="@+id/btnChooseStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            app:nb_backgroundColor="@android:color/transparent"
+                            app:nb_borderColor="#CAC8C8"
+                            app:nb_borderWidth="2dp"
+                            app:nb_focusColor="#66ACEB"
+                            app:nb_radius="10dp"
+                            app:nb_text="ใช้งานอยู่"
+                            app:nb_textColor="@android:color/tab_indicator_text"
+                            app:nb_textStyle="bold" />
+                    </FrameLayout>
+
+                    <com.ornach.nobobutton.NoboButton
+                        android:id="@+id/btnSaveStatus"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:visibility="visible"
+                        app:nb_backgroundColor="@color/colorAccent"
+                        app:nb_borderColor="@color/colorAccent"
+                        app:nb_borderWidth="2dp"
+                        app:nb_focusColor="#66ACEB"
+                        app:nb_radius="5dp"
+                        app:nb_text="บันทึก"
+                        app:nb_textColor="@color/white"
+                        app:nb_textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/viewLoadContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Loading..."
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/viewAlertContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/alert_icon" />
+
+                <TextView
+                    android:id="@+id/txtAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="No Recent Search"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewBtnMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="1dp"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardElevation="@dimen/cardview_default_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#CAC8C8"
+                android:orientation="horizontal">
+
+                <com.ornach.nobobutton.NoboButton
+                    android:id="@+id/btnQrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="0.5dp"
+                    android:layout_weight="1"
+                    app:nb_backgroundColor="@color/white"
+                    app:nb_borderColor="@color/colorPrimary"
+                    app:nb_focusColor="#66ACEB"
+                    app:nb_fontIcon="&#xf029;"
+                    app:nb_iconColor="@color/colorPrimary"
+                    app:nb_iconPosition="top"
+                    app:nb_iconSize="25dp"
+                    app:nb_text="Qr Code"
+                    app:nb_textColor="@android:color/tab_indicator_text" />
+
+                <com.ornach.nobobutton.NoboButton
+                    android:id="@+id/btnProductId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0.5dp"
+                    android:layout_weight="1"
+                    app:nb_backgroundColor="@color/white"
+                    app:nb_borderColor="@color/colorPrimary"
+                    app:nb_focusColor="#66ACEB"
+                    app:nb_fontIcon="&#xf002;"
+                    app:nb_iconColor="@color/colorPrimary"
+                    app:nb_iconPosition="top"
+                    app:nb_iconSize="25dp"
+                    app:nb_text="ค้นหารหัสครุภัณฑ์"
+                    app:nb_textColor="@android:color/tab_indicator_text" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

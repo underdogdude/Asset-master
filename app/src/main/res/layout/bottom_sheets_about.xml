@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="11dp"
+            android:text="เกี่ยวกับ"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_close_grey600_36dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgLogoHead"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/app_icon" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:layout_marginLeft="11dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/app_name"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:text="v1.0.0"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.ornach.nobobutton.NoboButton
+        android:id="@+id/btnLogout"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:nb_backgroundColor="@color/colorAccent"
+        app:nb_borderColor="@color/colorAccent"
+        app:nb_borderWidth="2dp"
+        app:nb_focusColor="#66ACEB"
+        app:nb_radius="5dp"
+        app:nb_text="ออกจากระบบ"
+        app:nb_textColor="@color/white"
+        app:nb_textStyle="bold" />
+
+</LinearLayout>

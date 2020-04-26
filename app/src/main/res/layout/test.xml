@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewInputProductNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        app:cardElevation="@dimen/cardview_default_elevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เลือกสถานะการตรวจสอบครุภัณฑ์"
+                android:textSize="16sp" />
+
+            <FrameLayout
+                android:id="@+id/viewStatus"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/chevronTagStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|right"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_chevron_down_grey600_24dp" />
+
+                <com.ornach.nobobutton.NoboButton
+                    android:id="@+id/btnChooseStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="2dp"
+                    app:nb_backgroundColor="@android:color/transparent"
+                    app:nb_borderColor="#CAC8C8"
+                    app:nb_borderWidth="2dp"
+                    app:nb_focusColor="#66ACEB"
+                    app:nb_radius="10dp"
+                    app:nb_text="Choose location"
+                    app:nb_textColor="@android:color/tab_indicator_text"
+                    app:nb_textStyle="bold" />
+            </FrameLayout>
+
+            <com.ornach.nobobutton.NoboButton
+                android:id="@+id/btnSaveStatus"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:nb_backgroundColor="@color/colorAccent"
+                app:nb_borderColor="@color/colorAccent"
+                app:nb_borderWidth="2dp"
+                app:nb_focusColor="#66ACEB"
+                app:nb_radius="5dp"
+                app:nb_text="บันทึก"
+                app:nb_textColor="@color/white"
+                app:nb_textStyle="bold" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
