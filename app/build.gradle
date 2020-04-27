@@ -25,10 +25,13 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
    
 }
 
 dependencies {
+=======
+>>>>>>> 4b9fda6e2846e075c559eaa3020c6c565aa53a12
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
