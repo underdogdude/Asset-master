@@ -1,8 +1,8 @@
 package xyz.codecool.android.asset;
 
-import com.microsoft.appcenter.AppCenter;
-import com.microsoft.appcenter.analytics.Analytics;
-import com.microsoft.appcenter.crashes.Crashes;
+// import com.microsoft.appcenter.AppCenter;
+// import com.microsoft.appcenter.analytics.Analytics;
+// import com.microsoft.appcenter.crashes.Crashes;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -76,7 +76,7 @@ public class HomeActivity extends BaseActivity {
         setNavigation();
         setPage(1);
 
-        AppCenter.start(getApplication(), "ec336a89-b720-4b95-afd3-69b66b9c4ab1",Analytics.class, Crashes.class);
+        // AppCenter.start(getApplication(), "ec336a89-b720-4b95-afd3-69b66b9c4ab1",Analytics.class, Crashes.class);
     }
 
     private void setPage(int page) {
