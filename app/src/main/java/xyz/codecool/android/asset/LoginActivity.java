@@ -49,7 +49,7 @@ public class LoginActivity extends BaseActivity{
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         ApiSetting apiSetting = new ApiSetting(this);
-        apiSetting.setBaseUrlPublic("http://asset.codecool.xyz/api/");
+        apiSetting.setBaseUrlPublic("http://muieassetproject.site/api/");
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
